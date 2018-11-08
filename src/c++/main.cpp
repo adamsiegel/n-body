@@ -8,7 +8,7 @@
 int main() {
 
   n_body::NBody n_body;
-  n_body.solver
+  //n_body.solver
   
   
   
