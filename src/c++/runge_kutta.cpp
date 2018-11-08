@@ -12,15 +12,29 @@ namespace runge_kutta {
 
   // ---------------------------------------------------------------------- //
   // Standard constructor //
-  RungeKutta() { }
+  RungeKutta::RungeKutta() { }
   
   // ---------------------------------------------------------------------- //
   // Standard destructor //
-  ~RungeKutta() { }
+  RungeKutta::~RungeKutta() { }
 
+  // ---------------------------------------------------------------------- //
+  // Creating a RK solver //
+  int RungeKutta::create(std::string solver_type) { }
 
+  // ---------------------------------------------------------------------- //
+  // Destroy a RK solver //
+  int RungeKutta::destroy() { }
+  
+  // ---------------------------------------------------------------------- //
+  // Setting up the RK solver code //
+  int RungeKutta::setup() { }
 
+  // ---------------------------------------------------------------------- //
+  // Main solver code //
+  int RungeKutta::solve() { }
 
+  
 
 
 

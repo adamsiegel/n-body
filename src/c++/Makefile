@@ -25,20 +25,20 @@ OBJ = main.o n_body.o solver.o runge_kutta.o
 
 # Main target
 $(EXE): $(OBJ)
-	$(CMP) $(OBJ) -o $(EXE)
+	$(CMP) $(DBG) $(OBJ) -o $(EXE)
 
 # Object file generation
 main.o: main.h
-	$(CMP) -c main.cpp
+	$(CMP) $(DBG) -c main.cpp
 
 n_body.o: n_body.cpp n_body.h
-	$(CMP) -c n_body.cpp
+	$(CMP) $(DBG) -c n_body.cpp
 
 solver.o: solver.cpp solver.h
-	$(CMP) -c solver.cpp
+	$(CMP) $(DBG) -c solver.cpp
 
 runge_kutta.o: runge_kutta.cpp runge_kutta.h
-	$(CMP) -c runge_kutta.cpp
+	$(CMP) $(DBG) -c runge_kutta.cpp
 
 
 # To remove

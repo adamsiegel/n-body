@@ -7,7 +7,10 @@
 
 
 // Include files //
+#ifndef NBODY_SOLVER_RUNGEKUTTA_SOLVER_H_
+#define NBODY_SOLVER_RUNGEKUTTA_SOLVER_H_
 #include "solver.h"
+#endif
 
 
 
@@ -23,13 +26,6 @@ namespace runge_kutta {
 
   //Solver class //
   class RungeKutta : public solver::Solver {
-    
-  private:
-    // Private Variables //
-
-
-    //Private Functions //
-
 
 
   public:
@@ -39,6 +35,27 @@ namespace runge_kutta {
     //Public Functions //
     RungeKutta();   //Standard constructor
     ~RungeKutta();  //Standard destructor
+    virtual int create(std::string solver_type);
+    virtual int destroy();
+    virtual int solve();
+    virtual int setup();
+
+    // ---------------------------------------------------------------------- //
+
+  protected:
+    // Protected Variables //
+
+    // Private Variables //
+    
+
+    // ---------------------------------------------------------------------- //
+    
+  private:
+    // Private Variables //
+
+
+    // Private Functions //
+
     
 
   }; //End Runge Kutta class
