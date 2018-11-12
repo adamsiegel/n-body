@@ -33,7 +33,20 @@ namespace runge_kutta {
   // Main solver code //
   int RungeKutta::Solve() {
     
-
+    // Generic 4th Order Rugne Kutta Method Coupled ODE Solver   //
+    //-----------------------------------------------------------//
+    //    Solves the equations based on the vector notation:     //
+    //                                                           //
+    //    y = y(y1, y2, ..., yN)                                 //
+    //    f = f(f1, f2, ..., fN)                                 //
+    //                                                           //
+    //    therefore, we have                                     //
+    //                                                           //
+    //    dy                                                     //
+    //    -- = f(y,t)                                            //
+    //    dt                                                     //
+    //                                                           //
+    //-----------------------------------------------------------//
     
 
 
