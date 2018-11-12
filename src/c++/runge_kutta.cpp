@@ -7,6 +7,9 @@
 
 #include "runge_kutta.h"
 
+//TMP
+#include <iostream>
+
 // Everything here is in the solver namespace //
 namespace runge_kutta {
 
@@ -19,20 +22,23 @@ namespace runge_kutta {
   RungeKutta::~RungeKutta() { }
 
   // ---------------------------------------------------------------------- //
-  // Creating a RK solver //
-  int RungeKutta::create(std::string solver_type) { }
-
-  // ---------------------------------------------------------------------- //
-  // Destroy a RK solver //
-  int RungeKutta::destroy() { }
-  
-  // ---------------------------------------------------------------------- //
   // Setting up the RK solver code //
-  int RungeKutta::setup() { }
+  int RungeKutta::Setup() { 
+
+    
+
+  }
 
   // ---------------------------------------------------------------------- //
   // Main solver code //
-  int RungeKutta::solve() { }
+  int RungeKutta::Solve() {
+    
+
+    
+
+
+    return 0;
+  }
 
   
 

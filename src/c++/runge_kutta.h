@@ -35,10 +35,8 @@ namespace runge_kutta {
     //Public Functions //
     RungeKutta();   //Standard constructor
     ~RungeKutta();  //Standard destructor
-    virtual int create(std::string solver_type);
-    virtual int destroy();
-    virtual int solve();
-    virtual int setup();
+    virtual int Solve();
+    virtual int Setup();
 
     // ---------------------------------------------------------------------- //
 

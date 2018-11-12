@@ -11,6 +11,11 @@
 #include "solver.h"
 #endif
 
+#ifndef NBODY_SOLVER_STDIO_RK_H_
+#define NBODY_SOLVER_STDIO_RK_H_
+#include <iostream>
+#endif
+
 
 
 
@@ -26,9 +31,13 @@ namespace n_body {
 
      public:
     // Public Variables //
-
+    
 
     //Public Functions //
+    NBody(); //Standard constructor
+    ~NBody(); //Standard destructor
+    int Setup(); //Setup the n-body problem
+    
 
     // --------------------------------------------------------------------- //
     
@@ -42,7 +51,8 @@ namespace n_body {
 
   private:
     // Private Variables //
-    solver::Solver *solver; //Declare the solver
+    solver::Solver* solver_; //Declare the solver
+                             //Main solver to use in any n_body function
 
 
     //Private Functions //

@@ -6,6 +6,7 @@
  *****************************************************************************/
 
 // Header files //
+#include <iostream>
 
 #ifndef NBODY_SOLVER_EXCEPTION_H_
 #define NBODY_SOLVER_EXCEPTION_H_
@@ -29,8 +30,8 @@
 //   Main solver    //
 namespace solver {
 
-  // Solver exception class                //
-  //   Inheritcs from main exception class //
+  // Solver exception class                               //
+  //   Inheritcs from main exception class and is virtual //
   class SolverInitException : public std::exception {
 
   public:
@@ -38,18 +39,20 @@ namespace solver {
     // Exception if the solver is not initialized           //
     //   (Must be some class and not the base solver class) //
     virtual const char* what() const throw() {
-      std::string err_msg = "Exception thrown: Must initialize a solver type!";
+      std::string err_msg = "\n";
+      err_msg += "Exception thrown: Must initialize a solver type!";
       err_msg += "\n";
       err_msg += "     DETAILS: Solver can only be called from the derived ";
-      err_msg += "              class \n";
+      err_msg += "\n";
+      err_msg += "              class. \n";
       return err_msg.c_str();
     }
     
 
-  protected:
+    protected:
     //None
     
-  private:
+    private:
     //None
     
   };
@@ -65,15 +68,15 @@ namespace solver {
 
   public:
     // Public Variables //
-
+    //None
 
     //Public Functions //
     Solver();  //Standard constructor
     ~Solver(); //Standard destructor
-    virtual int create(std::string solver_type);
-    virtual int destroy();
-    virtual int solve();
-    virtual int setup();
+    static solver::Solver* Create(std::string solver_type);
+    int Destroy();
+    virtual int Solve();
+    virtual int Setup();
 
     // ---------------------------------------------------------------------- //
     
@@ -87,7 +90,6 @@ namespace solver {
 
   private:
     // Private Variables //
-    SolverInitException sol_init_ex;
 
     //Private Functions //
     
